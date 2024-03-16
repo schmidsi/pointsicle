@@ -3,6 +3,9 @@
     "PancakeSwapFactory": {
       "address": "0x0BFbCF9fa4f9C56B0F40a671Ad40E0805A091865",
       "startBlock": 16950686
+    },
+    "Contract": {
+      "address": "0x03c864302ffbe80d0b603d561a67eff679f1431b"
     }
   }
 }
