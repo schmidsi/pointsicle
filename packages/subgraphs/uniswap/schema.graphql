@@ -1,0 +1,24 @@
+type PointsicleCampaign @entity(immutable: true) {
+  id: ID!
+  displayName: String
+}
+
+type PointsicleUser @entity {
+  id: Bytes!
+  questParticipations: [QuestParticipation!] @derivedFrom(field: "participant")
+  points: BigInt!
+  lastUpdated: BigInt!
+}
+
+type QuestParticipation @entity(immutable: true) {
+  id: ID!
+  quest: Quest!
+  participant: PointsicleUser!
+}
+
+type Quest @entity(immutable: true) {
+  id: ID!
+  description: String!
+  points: BigInt!
+  campaign: PointsicleCampaign!
+}

@@ -1,4 +1,0 @@
-type PointsicleAllocation @entity {
-  id: Bytes! # user address
-  points: BigInt!
-}

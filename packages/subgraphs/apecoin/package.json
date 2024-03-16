@@ -1,0 +1,28 @@
+{
+  "name": "debug",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ incrypto32/debug",
+    "deploy-staging-studio": "graph deploy --node https://api.studio.staging.thegraph.com/deploy/ --ipfs https://ipfs.testnet.thegraph.com/ipfs test --access-token=$GRAPH_STAGING_STUDIO_ACCESS_TOKEN",
+    "deploy-staging-1": "graph deploy --node https://api.staging.thegraph.com/deploy/ --ipfs https://ipfs.testnet.thegraph.com/ipfs incrypto32/debug1 --access-token=$GRAPH_STAGING_ACCESS_TOKEN",
+    "deploy-staging-2": "graph deploy --node https://api.staging.thegraph.com/deploy/  incrypto32/debug2 --access-token=$GRAPH_STAGING_ACCESS_TOKEN",
+    "deploy-staging-3": "graph deploy --node https://api.staging.thegraph.com/deploy/ incrypto32/debug3 --access-token=$GRAPH_STAGING_ACCESS_TOKEN",
+    "deploy-staging-4": "graph deploy --node https://api.staging.thegraph.com/deploy/ incrypto32/debug4 --access-token=$GRAPH_STAGING_ACCESS_TOKEN",
+    "create-local": "graph create --node http://localhost:8020/ incrypto32/debug",
+    "remove-local": "graph remove --node http://localhost:8020/ incrypto32/debug",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://api.thegraph.com/ipfs incrypto32/debug",
+    "create-local1": "graph create --node http://localhost:8020/ incrypto32/debug1",
+    "deploy-local1": "graph deploy --node http://localhost:8020/ --ipfs http://api.thegraph.com/ipfs incrypto32/debug1",
+    "test": "graph test"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.66.0-alpha-20240116165017-e428fe8",
+    "@graphprotocol/graph-ts": "0.32.0",
+    "codegen": "^0.1.0"
+  },
+  "devDependencies": {
+    "matchstick-as": "0.5.0"
+  }
+}

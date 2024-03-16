@@ -1,0 +1,98 @@
+type PointsicleCampaign @entity(immutable: true) {
+  id: ID!
+  displayName: String
+  # pointsAvailable: BigInt!
+}
+
+type PointsicleUser @entity {
+  id: Bytes!
+  questParticipations: [QuestParticipation!]! @derivedFrom(field: "participant")
+  points: BigInt! 
+  lastUpdated: BigInt!
+}
+
+type QuestParticipation @entity(immutable: true) {
+  id: ID!
+  quest: Quest!
+  participant: PointsicleUser!
+}
+
+type Quest @entity(immutable: true) {
+  id: ID!
+  description: String!
+  points: BigInt!
+  campaign: PointsicleCampaign!
+}type Approval @entity(immutable: true) {
+  id: Bytes!
+  owner: Bytes! # address
+  approved: Bytes! # address
+  tokenId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ApprovalForAll @entity(immutable: true) {
+  id: Bytes!
+  owner: Bytes! # address
+  operator: Bytes! # address
+  approved: Boolean! # bool
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Collect @entity(immutable: true) {
+  id: Bytes!
+  tokenId: BigInt! # uint256
+  recipient: Bytes! # address
+  amount0: BigInt! # uint256
+  amount1: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type DecreaseLiquidity @entity(immutable: true) {
+  id: Bytes!
+  tokenId: BigInt! # uint256
+  liquidity: BigInt! # uint128
+  amount0: BigInt! # uint256
+  amount1: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type IncreaseLiquidity @entity(immutable: true) {
+  id: Bytes!
+  tokenId: BigInt! # uint256
+  liquidity: BigInt! # uint128
+  amount0: BigInt! # uint256
+  amount1: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Transfer @entity(immutable: true) {
+  id: Bytes!
+  from: Bytes! # address
+  to: Bytes! # address
+  tokenId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+type Burn @entity(immutable: true) {
+  id: Bytes!
+  owner: Bytes! # address
+  tickLower: Int! # int24
+  tickUpper: Int! # int24
+  amount: BigInt! # uint128
+  amount0: BigInt! # uint256
+  amount1: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
