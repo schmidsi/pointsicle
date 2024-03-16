@@ -586,146 +586,6 @@ const  DashboardPage = () => {
         "status": "backlog",
         "label": "bug",
         "priority": "high"
-      },
-      {
-        "id": "TASK-2645",
-        "title": "Synthesizing the system won't do anything, we need to navigate the multi-byte HDD firewall!",
-        "status": "todo",
-        "label": "documentation",
-        "priority": "medium"
-      },
-      {
-        "id": "TASK-4535",
-        "title": "Try to copy the JSON circuit, maybe it will connect the wireless feed!",
-        "status": "in progress",
-        "label": "feature",
-        "priority": "low"
-      },
-      {
-        "id": "TASK-4463",
-        "title": "We need to copy the solid state AGP monitor!",
-        "status": "done",
-        "label": "documentation",
-        "priority": "low"
-      },
-      {
-        "id": "TASK-9745",
-        "title": "If we connect the protocol, we can get to the GB system through the bluetooth PCI microchip!",
-        "status": "canceled",
-        "label": "feature",
-        "priority": "high"
-      },
-      {
-        "id": "TASK-2080",
-        "title": "If we input the bus, we can get to the RAM matrix through the auxiliary RAM card!",
-        "status": "todo",
-        "label": "bug",
-        "priority": "medium"
-      },
-      {
-        "id": "TASK-3838",
-        "title": "I'll bypass the online TCP application, that should panel the AGP system!",
-        "status": "backlog",
-        "label": "bug",
-        "priority": "high"
-      },
-      {
-        "id": "TASK-1340",
-        "title": "We need to navigate the virtual PNG circuit!",
-        "status": "todo",
-        "label": "bug",
-        "priority": "medium"
-      },
-      {
-        "id": "TASK-6665",
-        "title": "If we parse the monitor, we can get to the SSD hard drive through the cross-platform AGP alarm!",
-        "status": "canceled",
-        "label": "feature",
-        "priority": "low"
-      },
-      {
-        "id": "TASK-7585",
-        "title": "If we calculate the hard drive, we can get to the SSL program through the multi-byte CSS microchip!",
-        "status": "backlog",
-        "label": "feature",
-        "priority": "low"
-      },
-      {
-        "id": "TASK-6319",
-        "title": "We need to copy the multi-byte SCSI program!",
-        "status": "backlog",
-        "label": "bug",
-        "priority": "high"
-      },
-      {
-        "id": "TASK-4369",
-        "title": "Try to input the SCSI bus, maybe it will generate the 1080p pixel!",
-        "status": "backlog",
-        "label": "bug",
-        "priority": "high"
-      },
-      {
-        "id": "TASK-9035",
-        "title": "We need to override the solid state PNG array!",
-        "status": "canceled",
-        "label": "documentation",
-        "priority": "low"
-      },
-      {
-        "id": "TASK-3970",
-        "title": "You can't index the transmitter without quantifying the haptic ASCII card!",
-        "status": "todo",
-        "label": "documentation",
-        "priority": "medium"
-      },
-      {
-        "id": "TASK-4473",
-        "title": "You can't bypass the protocol without overriding the neural RSS program!",
-        "status": "todo",
-        "label": "documentation",
-        "priority": "low"
-      },
-      {
-        "id": "TASK-4136",
-        "title": "You can't hack the hard drive without hacking the primary JSON program!",
-        "status": "canceled",
-        "label": "bug",
-        "priority": "medium"
-      },
-      {
-        "id": "TASK-3939",
-        "title": "Use the back-end SQL firewall, then you can connect the neural hard drive!",
-        "status": "done",
-        "label": "feature",
-        "priority": "low"
-      },
-      {
-        "id": "TASK-2007",
-        "title": "I'll input the back-end USB protocol, that should bandwidth the PCI system!",
-        "status": "backlog",
-        "label": "bug",
-        "priority": "high"
-      },
-      {
-        "id": "TASK-7516",
-        "title": "Use the primary SQL program, then you can generate the auxiliary transmitter!",
-        "status": "done",
-        "label": "documentation",
-        "priority": "medium"
-      },
-      {
-        "id": "TASK-6906",
-        "title": "Try to back up the DRAM system, maybe it will reboot the online transmitter!",
-        "status": "done",
-        "label": "feature",
-        "priority": "high"
-      },
-      {
-        "id": "TASK-5207",
-        "title": "The SMS interface is down, copy the bluetooth bus so we can quantify the VGA card!",
-        "status": "in progress",
-        "label": "bug",
-        "priority": "low"
       }
     ]`
 
@@ -738,9 +598,9 @@ const  DashboardPage = () => {
 
   return (
     <>
-      <div>
+      {/* <div>
         <Button>Click me</Button>
-      </div>
+      </div> */}
 
 
 
