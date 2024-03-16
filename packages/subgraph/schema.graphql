@@ -1,3 +1,8 @@
+type PointsicleAllocation @entity {
+  id: Bytes! # user address
+  points: BigInt!
+}
+
 type Approval @entity(immutable: true) {
   id: Bytes!
   owner: Bytes! # address
