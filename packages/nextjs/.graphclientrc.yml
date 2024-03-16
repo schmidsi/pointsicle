@@ -1,0 +1,8 @@
+sources:
+  - name: network_subgraph
+    handler:
+      graphql:
+        endpoint: https://gateway-arbitrum.network.thegraph.com/api/e8c6e4f2a7fc3b832f3917a050e8057a/subgraphs/id/DZz4kDTdmzWLWsV373w2bSmoar3umKKH9y82SUKr5qmp
+
+documents:
+  - "./queries/**/*.graphql"

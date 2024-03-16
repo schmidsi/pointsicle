@@ -1,0 +1,22 @@
+query PointsicleSubgraphs {
+  subgraphDeploymentSchemas(where: { schema_contains: "type PointsicleAllocation @entity" }) {
+    id
+    manifest {
+      id
+      deployment {
+        id
+        versions {
+          id
+          subgraph {
+            id
+            metadata {
+              id
+              displayName
+              description
+            }
+          }
+        }
+      }
+    }
+  }
+}
