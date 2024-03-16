@@ -3,6 +3,11 @@ import { Metadata } from "next";
 import { ScaffoldEthAppWithProviders } from "~~/components/ScaffoldEthAppWithProviders";
 import { ThemeProvider } from "~~/components/ThemeProvider";
 import "~~/styles/globals.css";
+import NavBar from "./navbar";
+import { config } from '@/config'
+import Web3ModalProvider from '@/context'
+import { cookieToInitialState } from 'wagmi'
+import { headers } from 'next/headers'
 
 const baseUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -43,11 +48,24 @@ export const metadata: Metadata = {
 };
 
 const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
+
+  const initialState = cookieToInitialState(config, headers().get('cookie'))
+
+
   return (
     <html suppressHydrationWarning>
       <body>
         <ThemeProvider enableSystem>
-          <ScaffoldEthAppWithProviders>{children}</ScaffoldEthAppWithProviders>
+          {/* <ScaffoldEthAppWithProviders> */}
+          <Web3ModalProvider initialState={initialState}>
+            <div className="">
+              <NavBar></NavBar>
+              <div className="max-w-screen-xl w-full mt-16 mx-auto">
+                {children}
+              </div>
+            </div>
+            {/* </ScaffoldEthAppWithProviders> */}
+          </Web3ModalProvider>
         </ThemeProvider>
       </body>
     </html>
