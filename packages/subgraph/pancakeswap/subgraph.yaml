@@ -1,0 +1,41 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: PancakeSwapFactory
+    network: mainnet
+    source:
+      address: "0x0BFbCF9fa4f9C56B0F40a671Ad40E0805A091865"
+      abi: PancakeSwapFactory
+      startBlock: 16950686
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - FeeAmountEnabled
+        - FeeAmountExtraInfoUpdated
+        - OwnerChanged
+        - PoolCreated
+        - SetLmPoolDeployer
+        - WhiteListAdded
+      abis:
+        - name: PancakeSwapFactory
+          file: ./abis/PancakeSwapFactory.json
+      eventHandlers:
+        - event: FeeAmountEnabled(indexed uint24,indexed int24)
+          handler: handleFeeAmountEnabled
+        - event: FeeAmountExtraInfoUpdated(indexed uint24,bool,bool)
+          handler: handleFeeAmountExtraInfoUpdated
+        - event: OwnerChanged(indexed address,indexed address)
+          handler: handleOwnerChanged
+        - event: PoolCreated(indexed address,indexed address,indexed uint24,int24,address)
+          handler: handlePoolCreated
+        - event: SetLmPoolDeployer(indexed address)
+          handler: handleSetLmPoolDeployer
+        - event: WhiteListAdded(indexed address,bool)
+          handler: handleWhiteListAdded
+      file: ./src/pancake-swap-factory.ts
