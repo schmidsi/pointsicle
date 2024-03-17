@@ -16,7 +16,7 @@
 import { redirect } from "next/navigation";
 import { useAccount } from "wagmi";
 
-const ParticipationLayout = ({ children }: { children: React.ReactNode }) => {
+const ProfilePage = () => {
 
   let { address } = useAccount()
 
@@ -36,4 +36,4 @@ const ParticipationLayout = ({ children }: { children: React.ReactNode }) => {
   }
 }
 
-export default ParticipationLayout;
+export default ProfilePage;
