@@ -9,6 +9,7 @@ import { labels, priorities, statuses } from "../_data/data"
 import { Task } from "../_data/schema"
 import { DataTableColumnHeader } from "./data-table-column-header"
 import { DataTableRowActions } from "./data-table-row-actions"
+import Link from "next/link"
 
 
 
@@ -20,7 +21,7 @@ export const columns: ColumnDef<Task>[] = [
       <DataTableColumnHeader column={column} title="Wallet" />
     ),
 
-    cell: ({ row }) => <div className="w-[80px]">{row.getValue("id")}</div>,
+    cell: ({ row }) => <Link href={`/profiles/${row.getValue("id")}`} className="w-[80px] underline">{row.getValue("id")}</Link>,
     enableSorting: false,
     enableHiding: false,
   },

@@ -30,9 +30,9 @@ const NavBar: NextPage = () => {
             <div className="text-2xl font-bold text-gray-800 mr-8">Pointsicle</div>
             <nav className="flex">
               <Link href="/campaigns" className="mx-3 text-gray-700 hover:text-gray-900">
-                Campaings
+                Campaigns
               </Link>
-              <Link href={`/profile`} className="mx-3 text-gray-700 hover:text-gray-900">
+              <Link href={`/profiles`} className="mx-3 text-gray-700 hover:text-gray-900">
                 Profile
               </Link>
             </nav>

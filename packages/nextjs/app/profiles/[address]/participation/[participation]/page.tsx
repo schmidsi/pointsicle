@@ -108,10 +108,10 @@ const DashboardPage = ({ params }: {
 
         {/* <DataTable data={tasks} columns={columns} /> */}
       </div>
-      <div className="w-full mx-8">
+      {/* <div className="w-full mx-8">
 
         <Button className="m-auto w-64">Mint {params.participation}</Button>
-      </div>
+      </div> */}
     </>
   );
 };
