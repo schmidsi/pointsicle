@@ -68,12 +68,6 @@ const DashboardPage = async ({ params }: {
   let request = await call()
 
 
-  // console.log(request, 'requestrequestrequestrequest');
-  // console.log(request.data.pointsicleCampaigns[0], 'requestrequestrequestrequest');
-  console.log(request.data.quests, 'requestrequestrequestrequest');
-
-
-
   return (
     <>
 

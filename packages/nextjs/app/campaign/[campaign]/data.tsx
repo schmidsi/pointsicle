@@ -11,10 +11,11 @@ const CampaignPage = ({ props }: {
     return <>GraphQL request returned an error for this one, oops</>
   }
 
+  
 
   const tasks = props.data.pointsicleUsers ? props.data.pointsicleUsers.map((user: any) => {
 
-    console.log(user);
+    // console.log(user, ' useruseruseruseruser');
 
     return {
       id: user.id,

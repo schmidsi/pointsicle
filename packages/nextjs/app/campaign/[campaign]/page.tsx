@@ -67,7 +67,7 @@ const DashboardPage = async ({ params }: {
   }
 
 
-  const tasks = data.pointsicleUsers ? data.pointsicleUsers.map((user: any) => {
+  const tasks = data.data.pointsicleUsers ? data.data.pointsicleUsers.map((user: any) => {
 
     console.log(user);
 
@@ -79,7 +79,6 @@ const DashboardPage = async ({ params }: {
 
   ) : []
 
-  console.log(data, ' pointsicleCampaignspointsicleCampaignspointsicleCampaignspointsicleCampaigns');
   
   return (
     <>
