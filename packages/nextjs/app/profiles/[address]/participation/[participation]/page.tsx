@@ -33,6 +33,7 @@ const DashboardPage = async ({ params }: {
         }
   
         quest {
+          id
           description
         }  
         }
@@ -67,6 +68,8 @@ const DashboardPage = async ({ params }: {
 
   let request = await call()
 
+  console.log(request, ' ewqewqeqqwe');
+  
 
   return (
     <>
@@ -109,7 +112,9 @@ const DashboardPage = async ({ params }: {
                       <h3 className="font-semibold text-lg">Quest {index + 1}</h3>
                       <p className="text-gray-500">{quest.description}</p>
                     </div>
-                    <span className="mr-8 text-right w-24 whitespace-nowrap font-semibold">+{quest.points} Points</span>
+                    <span className="mr-8 text-right w-24 whitespace-nowrap font-semibold">{request.data.pointsicleUser.questParticipations.find((parti: any) => {
+                      return parti.quest.id == quest.id
+                      }) ? `Done!` : `+${quest.points} Points`} </span>
                   </div>
                 )
               })
