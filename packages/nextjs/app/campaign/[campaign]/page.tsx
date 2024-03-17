@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useAccount } from "wagmi";
 import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { Address } from "@/components/scaffold-eth";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
